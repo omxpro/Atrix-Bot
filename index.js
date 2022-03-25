@@ -3,17 +3,20 @@ const aoijs = require("aoi.js")
 const bot = new aoijs.Bot({
 token: process.env.TOKEN,
 prefix: process.env.PREFIX,
-intents: ["GUILDS", "GUILD_MESSAGES"]
+intents: "all"
 })
 
 //Events
 bot.onMessage()
+const loader = new aoijs.LoadCommands(bot)
+ loader.load(bot.cmd,"./src/")
 
-//Command Example (ping)
-bot.command({
-name: "ping",
-code: `Pong! $pingms`
-})
+ /*
+ bot.cmd is object of Collections where the command data will be stored
+ "./commands/" is the path of folder where all the commands' code will be present
+ */
+
+
 
 //Ready Event
 bot.readyCommand({
