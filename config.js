@@ -1,6 +1,6 @@
 module.exports = {
   Bot: {
-    token: "OTQ5MjYxMTE2MDg3ODk0MDE3.YiHyTg.wxwdBZ4nle2f35HM1IpmDdn1bMI",
+    token: "",
     prefix: "$",
     intents: "all",
     database: {
